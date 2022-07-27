@@ -1,0 +1,41 @@
+html, body {
+    height: 100%;
+}
+
+body {
+    background-color: #5e5ee3;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.box__container {
+    height: 300px;
+    width: 300px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+}
+
+.box {
+    border-bottom: 5px solid black;
+    border-right: 5px solid black;
+    font-size: 50px;
+    text-align: center;
+    line-height: 95px;
+    cursor: pointer;
+    user-select: none;
+}
+
+.box:nth-child(3n) {
+    border-right: none;
+}
+
+.box:nth-child(n+7) {
+    border-bottom: none;
+}
+
+.box.highlight {
+    background-color: aqua;
+}
